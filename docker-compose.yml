@@ -1,0 +1,45 @@
+# Arda nota: Borrar esta basura - solo estaba probando la replicacion (replica inconsistentemente... porque? no se)
+
+version: '3.8'
+
+services:
+  db-master:
+    image: mysql:8.0
+    container_name: db-master
+    environment:
+      MYSQL_ROOT_PASSWORD: rootpassword
+      MYSQL_DATABASE: app_tareas_db
+    ports:
+      - "3306:3306"
+    volumes:
+      - ./database/init:/docker-entrypoint-initdb.d
+    command: >
+      --server-id=1 
+      --log-bin=mysql-bin 
+      --binlog-do-db=app_tareas_db
+
+  db-slave:
+    image: mysql:8.0
+    container_name: db-slave
+    environment:
+      MYSQL_ROOT_PASSWORD: rootpassword
+    ports:
+      - "3307:3306"
+    command: >
+      --server-id=2 
+      --relay-log=relay-log-bin 
+      --read-only=1
+    depends_on:
+      - db-master
+
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin
+    container_name: phpmyadmin_ad
+    environment:
+      PMA_ARBITRARY: 1
+      PMA_HOSTS: db-master, db-slave
+    ports:
+      - "8080:80"
+    depends_on:
+      - db-master
+      - db-slave
