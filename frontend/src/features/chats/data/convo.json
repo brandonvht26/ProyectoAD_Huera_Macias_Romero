@@ -1,0 +1,187 @@
+{
+  "conversations": [
+    {
+      "id": "conv1",
+      "profile": "https://randomuser.me/api/portraits/men/32.jpg",
+      "username": "prof.gomez",
+      "fullName": "Ing. Carlos Gómez",
+      "title": "Docente Titular - Sistemas Operativos",
+      "messages": [
+        {
+          "sender": "You",
+          "message": "¡Entendido, ingeniero! Muchas gracias.",
+          "timestamp": "2024-08-24T11:15:15"
+        },
+        {
+          "sender": "Carlos",
+          "message": "No hay problema, asegúrese de revisar la rúbrica antes de subirlo.",
+          "timestamp": "2024-08-24T11:11:30"
+        },
+        {
+          "sender": "You",
+          "message": "Perfecto, entonces subiré el reporte en formato PDF.",
+          "timestamp": "2024-08-23T09:26:50"
+        },
+        {
+          "sender": "Carlos",
+          "message": "Sí, el documento principal debe ir en PDF y el código en un .zip.",
+          "timestamp": "2024-08-23T09:25:15"
+        },
+        {
+          "sender": "You",
+          "message": "Buenos días ingeniero. Tengo una duda sobre el entregable de la práctica 3. ¿Debe ser solo en PDF?",
+          "timestamp": "2024-08-23T09:22:00"
+        }
+      ]
+    },
+    {
+      "id": "conv2",
+      "profile": "https://randomuser.me/api/portraits/women/45.jpg",
+      "username": "andrea.lopez",
+      "fullName": "Andrea López",
+      "title": "Representante Estudiantil",
+      "messages": [
+        {
+          "sender": "Andrea",
+          "message": "Sí, ya hablé con decanato, nos darán una semana más.",
+          "timestamp": "2024-08-23T10:35:00"
+        },
+        {
+          "sender": "You",
+          "message": "¿Pudiste averiguar lo de la extensión del plazo del proyecto?",
+          "timestamp": "2024-08-23T10:32:00"
+        },
+        {
+          "sender": "Andrea",
+          "message": "¡Hola! Te tengo buenas noticias.",
+          "timestamp": "2024-08-23T10:30:00"
+        }
+      ]
+    },
+    {
+      "id": "conv3",
+      "profile": "https://randomuser.me/api/portraits/men/54.jpg",
+      "username": "dr.mendez",
+      "fullName": "Dr. Luis Méndez",
+      "title": "Decano FIS",
+      "messages": [
+        {
+          "sender": "You",
+          "message": "Entendido doctor, estaré ahí puntual.",
+          "timestamp": "2024-08-22T18:59:00"
+        },
+        {
+          "sender": "Luis",
+          "message": "Excelente, nos vemos en la sala de reuniones del decanato.",
+          "timestamp": "2024-08-22T18:55:00"
+        },
+        {
+          "sender": "You",
+          "message": "Sí, tengo listos los avances de mi tesis para revisión.",
+          "timestamp": "2024-08-22T18:50:00"
+        },
+        {
+          "sender": "Luis",
+          "message": "¿Mantenemos la tutoría de mañana a las 10am?",
+          "timestamp": "2024-08-22T18:45:00"
+        }
+      ]
+    },
+    {
+      "id": "conv4",
+      "profile": "https://randomuser.me/api/portraits/women/29.jpg",
+      "username": "sofia.ayudante",
+      "fullName": "Sofía Torres",
+      "title": "Ayudante de Cátedra",
+      "messages": [
+        {
+          "sender": "You",
+          "message": "¡Muchas gracias, Sofi!",
+          "timestamp": "2024-08-23T11:30:00"
+        },
+        {
+          "sender": "Sofía",
+          "message": "Con gusto, te aviso en cuanto lo haya revisado.",
+          "timestamp": "2024-08-23T11:30:00"
+        },
+        {
+          "sender": "You",
+          "message": "Claro, ya subí mis respuestas de los ejercicios del capítulo 4.",
+          "timestamp": "2024-08-23T11:25:00"
+        },
+        {
+          "sender": "Sofía",
+          "message": "¡Hola! ¿Puedes enviarme tu taller para revisarlo antes de pasarlo al ingeniero?",
+          "timestamp": "2024-08-23T11:20:00"
+        }
+      ]
+    },
+    {
+      "id": "conv5",
+      "profile": "https://randomuser.me/api/portraits/men/72.jpg",
+      "username": "jorge.sistemas",
+      "fullName": "Jorge Ramírez",
+      "title": "Compañero de Grupo",
+      "messages": [
+        {
+          "sender": "You",
+          "message": "Buenísimo, lo descargo y lo integro con mi parte.",
+          "timestamp": "2024-08-23T12:00:00"
+        },
+        {
+          "sender": "Jorge",
+          "message": "Ya subí los diagramas UML al repositorio del grupo.",
+          "timestamp": "2024-08-23T11:58:00"
+        },
+        {
+          "sender": "Jorge",
+          "message": "¡Terminé mi parte del proyecto final!",
+          "timestamp": "2024-08-23T11:55:00"
+        }
+      ]
+    },
+    {
+      "id": "conv6",
+      "profile": "https://randomuser.me/api/portraits/women/68.jpg",
+      "username": "marta.biblio",
+      "fullName": "Marta Suárez",
+      "title": "Biblioteca EPN",
+      "messages": [
+        {
+          "sender": "Marta",
+          "message": "Tienes hasta el viernes para devolverlo sin multa.",
+          "timestamp": "2024-08-22T14:10:00"
+        },
+        {
+          "sender": "You",
+          "message": "Hola, ¿hasta cuándo puedo renovar el libro de Redes?",
+          "timestamp": "2024-08-22T14:05:00"
+        }
+      ]
+    },
+    {
+      "id": "conv7",
+      "profile": "https://randomuser.me/api/portraits/men/24.jpg",
+      "username": "mateo.dev",
+      "fullName": "Mateo Silva",
+      "title": "Estudiante",
+      "messages": [
+        {
+          "sender": "Mateo",
+          "message": "De una, te paso los apuntes por aquí.",
+          "timestamp": "2024-08-23T15:45:00"
+        },
+        {
+          "sender": "You",
+          "message": "No pude ir a la clase de la mañana, ¿tienes los apuntes?",
+          "timestamp": "2024-08-23T15:40:00"
+        },
+        {
+          "sender": "Mateo",
+          "message": "¡Qué onda loco!",
+          "timestamp": "2024-08-23T15:35:00"
+        }
+      ]
+    }
+  ]
+}
