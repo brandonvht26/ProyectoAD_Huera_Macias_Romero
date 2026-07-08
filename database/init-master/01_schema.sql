@@ -44,9 +44,9 @@ CREATE TABLE Entregas (
 -- DATOS PRUEBA
 
 INSERT INTO Estudiantes (correo_institucional, nombre, password_hash) VALUES
-('ariel.macias@epn.edu.ec', 'Ariel Macías', 'hash_simulado_123'),
-('ardanny.romero@epn.edu.ec', 'Ardanny Romero', 'hash_simulado_456'),
-('brandon.huera@epn.edu.ec', 'Brandon Huera', 'hash_simulado_789');
+('ariel.macias@epn.edu.ec', 'Ariel Macías', '123456'),
+('ardanny.romero@epn.edu.ec', 'Ardanny Romero', '000000'),
+('brandon.huera@epn.edu.ec', 'Brandon Huera', '123456');
 
 INSERT INTO Tareas (codigo_tarea, titulo, descripcion, fecha_limite) VALUES
 ('AD-001', 'Ensayo sobre Docker', 'Redactar un resumen de la arquitectura de contenedores.', '2026-07-20 23:59:00'),
