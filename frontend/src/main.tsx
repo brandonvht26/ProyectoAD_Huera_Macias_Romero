@@ -7,7 +7,7 @@ import {
   QueryClientProvider,
 } from '@tanstack/react-query'
 import { RouterProvider, createRouter } from '@tanstack/react-router'
-import { enableMocking } from '@/mocks'
+// import { enableMocking } from '@/mocks'
 import { DirectionProvider } from './context/direction-provider'
 import { FontProvider } from './context/font-provider'
 import { ThemeProvider } from './context/theme-provider'
@@ -66,7 +66,7 @@ declare module '@tanstack/react-router' {
 }
 
 async function bootstrap() {
-  await enableMocking()
+  // await enableMocking()
 
   const rootElement = document.getElementById('root')!
   if (!rootElement.innerHTML) {

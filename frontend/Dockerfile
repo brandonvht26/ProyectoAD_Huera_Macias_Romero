@@ -6,8 +6,7 @@ ARG NGINX_IMAGE=nginx:1.27-alpine
 FROM ${NODE_IMAGE} AS build
 WORKDIR /app
 
-ENV CI=true \
-    NODE_ENV=production
+ENV CI=true
 
 COPY package.json package-lock.json* ./
 RUN if [ -f package-lock.json ]; then npm ci; else npm install; fi
