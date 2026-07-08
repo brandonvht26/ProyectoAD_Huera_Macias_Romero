@@ -57,7 +57,7 @@ services:
         condition: service_healthy
     volumes:
       - ./database/scripts/setup-replication.sh:/setup-replication.sh
-    entrypoint: ["bash", "/setup-replication.sh"]
+    entrypoint: ["bash", "-c", "sed 's/\\r$//' /setup-replication.sh > /tmp/setup.sh && bash /tmp/setup.sh"]
     restart: "no"
 
   phpmyadmin:
