@@ -72,18 +72,51 @@ services:
       - db-master
       - db-slave
 
-  backend:
+  backend-node1:
     build: ./backend
-    container_name: app_backend
+    container_name: app_backend_1
     environment:
       DB_HOST: db-master
       DB_PORT: 3306
       PORT: 3000
-    ports:
-      - "3000:3000"
+      NODE_ID: "nodo-1"
     depends_on:
       db-master:
         condition: service_healthy
+
+  backend-node2:
+    build: ./backend
+    container_name: app_backend_2
+    environment:
+      DB_HOST: db-master
+      DB_PORT: 3306
+      PORT: 3000
+      NODE_ID: "nodo-2"
+    depends_on:
+      db-master:
+        condition: service_healthy
+
+  backend-node3:
+    build: ./backend
+    container_name: app_backend_3
+    environment:
+      DB_HOST: db-master
+      DB_PORT: 3306
+      PORT: 3000
+      NODE_ID: "nodo-3"
+    depends_on:
+      db-master:
+        condition: service_healthy
+
+  lb:
+    build: ./nginx
+    container_name: nginx_lb
+    ports:
+      - "3000:80"
+    depends_on:
+      - backend-node1
+      - backend-node2
+      - backend-node3
 
   frontend:
     build: 
@@ -94,7 +127,7 @@ services:
     ports:
       - "80:80"
     depends_on:
-      - backend
+      - lb
 
 volumes:
   master-data:

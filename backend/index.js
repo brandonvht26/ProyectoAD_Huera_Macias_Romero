@@ -9,9 +9,16 @@ const port = process.env.PORT || 3000;
 // Configuración de CORS para aceptar peticiones del frontend
 app.use(cors({
   origin: ['http://localhost:5173', 'http://127.0.0.1:5173', 'http://localhost'], // Permitir orígenes de Vite y Docker
-  credentials: true
+  credentials: true,
+  exposedHeaders: ['X-Served-By']
 }));
 app.use(express.json());
+
+// Middleware para inyectar cabecera del nodo que atiende
+app.use((req, res, next) => {
+  res.setHeader('X-Served-By', process.env.NODE_ID || 'unknown');
+  next();
+});
 
 // Conexión a la base de datos Master
 const pool = mysql.createPool({

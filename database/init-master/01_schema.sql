@@ -51,10 +51,10 @@ INSERT INTO Estudiantes (correo_institucional, nombre, password_hash) VALUES
 INSERT INTO Tareas (codigo_tarea, titulo, descripcion, fecha_limite) VALUES
 ('AD-001', 'Ensayo sobre Docker', 'Redactar un resumen de la arquitectura de contenedores.', '2026-07-20 23:59:00'),
 ('AD-002', 'Script de Replicacion', 'Subir los comandos utilizados para configurar Master-Slave.', '2026-07-15 18:00:00'),
-('AD-003', 'Tarea Vencida - Prueba', 'Esta tarea sirve para probar el bloqueo de sistema.', '2026-06-01 10:00:00'),
+('AD-003', 'Tarea Programacion - Prueba', 'Esta tarea sirve para probar el bloqueo de sistema.', '2026-06-01 10:00:00'),
 ('AD-004', 'Modelo Entidad-Relacion', 'Disenar el modelo ER de la base de datos del proyecto.', '2026-07-18 20:00:00'),
 ('AD-005', 'Normalizacion de Base de Datos', 'Entregar la base de datos normalizada hasta tercera forma normal (3FN).', '2026-07-24 23:59:00'),
 ('AD-006', 'Consultas SQL Avanzadas', 'Desarrollar consultas utilizando JOIN, GROUP BY y subconsultas.', '2026-07-31 23:59:00'),
 ('AD-007', 'Respaldo y Restauracion', 'Realizar un respaldo de la base de datos y documentar el proceso de restauracion.', '2026-08-05 18:30:00'),
-('AD-008', 'Informe Vencido - Seguridad', 'Presentar un informe sobre buenas practicas de seguridad en bases de datos.', '2026-05-18 17:00:00'),
-('AD-009', 'Practica Vencida - Indices', 'Crear indices para optimizar consultas y explicar los resultados obtenidos.', '2026-06-20 23:59:00');
+('AD-008', 'Informe Ciberseguridad - Seguridad', 'Presentar un informe sobre buenas practicas de seguridad en bases de datos.', '2026-05-18 17:00:00'),
+('AD-009', 'Practica POO - Clases e Instancias', 'Desarrollar clases para la simulacion de un sistema de gestion de estudiantes.', '2026-06-20 23:59:00');

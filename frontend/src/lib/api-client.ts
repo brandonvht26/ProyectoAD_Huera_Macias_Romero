@@ -1,5 +1,6 @@
 import axios, { type AxiosInstance, type InternalAxiosRequestConfig } from 'axios'
 import { useAuthStore } from '@/stores/auth-store'
+import { useNodeStore } from '@/stores/node-store'
 
 const BASE_URL = import.meta.env.VITE_API_URL || '/api'
 
@@ -20,7 +21,13 @@ apiClient.interceptors.request.use((config: InternalAxiosRequestConfig) => {
 })
 
 apiClient.interceptors.response.use(
-  (response) => response,
+  (response) => {
+    const servedBy = response.headers['x-served-by']
+    if (servedBy) {
+      useNodeStore.getState().setServedBy(servedBy)
+    }
+    return response
+  },
   (error) => {
     if (
       error instanceof axios.AxiosError &&
