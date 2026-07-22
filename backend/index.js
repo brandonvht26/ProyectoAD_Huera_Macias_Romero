@@ -57,6 +57,12 @@ app.post('/api/auth/login', async (req, res) => {
   if (!correo_institucional || !password) {
     return res.status(400).json({ message: 'Correo y contraseña son obligatorios.' });
   }
+
+  const dominioInstitucional = /@epn\.edu\.ec$/i;
+  if (!dominioInstitucional.test(correo_institucional)) {
+    return res.status(400).json({ message: 'Debe utilizar su correo institucional (@epn.edu.ec).' });
+  }
+
   try {
     // Comparamos el password con el hash_simulado (o la contraseña en BD)
     const [rows] = await pool.execute(
